@@ -16,10 +16,10 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.Divider
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -67,9 +67,9 @@ fun TranslateTextField(
             .padding(16.dp)
     ) {
         AnimatedContent(
-            targetState = toText, label = ""
+            targetState = toText
         ) { toText ->
-            if (toText == null || isTranslating) {
+            if(toText == null || isTranslating) {
                 IdleTranslateTextField(
                     fromText = fromText,
                     isTranslating = isTranslating,
@@ -111,24 +111,24 @@ private fun TranslatedTextField(
     ) {
         LanguageDisplay(language = fromLanguage)
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = fromText, color = MaterialTheme.colors.onSurface)
+        Text(
+            text = fromText,
+            color = MaterialTheme.colorScheme.onSurface
+        )
         Spacer(modifier = Modifier.height(16.dp))
         Row(
             modifier = Modifier.align(Alignment.End)
         ) {
-            IconButton(
-                onClick = {
-                    onCopyClick(fromText)
-                }) {
+            IconButton(onClick = {
+                onCopyClick(fromText)
+            }) {
                 Icon(
                     imageVector = ImageVector.vectorResource(id = R.drawable.copy),
                     contentDescription = "Copy",
                     tint = LightBlue
                 )
             }
-            IconButton(
-                onClick = onCloseClick
-            ) {
+            IconButton(onClick = onCloseClick) {
                 Icon(
                     imageVector = Icons.Rounded.Close,
                     contentDescription = "Close",
@@ -141,24 +141,24 @@ private fun TranslatedTextField(
         Spacer(modifier = Modifier.height(16.dp))
         LanguageDisplay(language = toLanguage)
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = toText, color = MaterialTheme.colors.onSurface)
+        Text(
+            text = toText,
+            color = MaterialTheme.colorScheme.onSurface
+        )
         Spacer(modifier = Modifier.height(16.dp))
         Row(
             modifier = Modifier.align(Alignment.End)
         ) {
-            IconButton(
-                onClick = {
-                    onCopyClick(toText)
-                }) {
+            IconButton(onClick = {
+                onCopyClick(toText)
+            }) {
                 Icon(
                     imageVector = ImageVector.vectorResource(id = R.drawable.copy),
                     contentDescription = "Copy",
                     tint = LightBlue
                 )
             }
-            IconButton(
-                onClick = onSpeakerClick
-            ) {
+            IconButton(onClick = onSpeakerClick) {
                 Icon(
                     imageVector = ImageVector.vectorResource(id = R.drawable.speaker),
                     contentDescription = "Play loud",
@@ -180,24 +180,21 @@ private fun IdleTranslateTextField(
     var isFocused by remember {
         mutableStateOf(false)
     }
-
-    Box(
-        modifier = modifier
-    ) {
+    Box(modifier = modifier) {
         BasicTextField(
             value = fromText,
             onValueChange = onTextChange,
-            cursorBrush = SolidColor(MaterialTheme.colors.primary),
-            modifier = modifier
+            cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
+            modifier = Modifier
                 .fillMaxSize()
                 .onFocusChanged { isFocused = it.isFocused },
             textStyle = TextStyle(
-                color = MaterialTheme.colors.onSurface
+                color = androidx.compose.material3.MaterialTheme.colorScheme.onSurface
             )
         )
-        if (fromText.isNotEmpty() && !isFocused) {
+        if (fromText.isEmpty() && !isFocused) {
             Text(
-                text = "Enter a text to translate",
+                text = "Enter text to translate",
                 color = LightBlue
             )
         }
