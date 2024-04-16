@@ -6,7 +6,7 @@ sealed class TranslateEvent {
     data class ChooseFromLanguage(val language: UiLanguage): TranslateEvent()
     data class ChooseToLanguage(val language: UiLanguage): TranslateEvent()
     object StopChoosingLanguage: TranslateEvent()
-    object SwapLanguage: TranslateEvent()
+    object SwapLanguages: TranslateEvent()
     data class ChangeTranslationText(val text: String): TranslateEvent()
     object Translate: TranslateEvent()
     object OpenFromLanguageDropDown: TranslateEvent()
@@ -15,6 +15,6 @@ sealed class TranslateEvent {
     data class SelectHistoryItem(val item: UiHistoryItem): TranslateEvent()
     object EditTranslation: TranslateEvent()
     object RecordAudio: TranslateEvent()
-    data class SubmitVoiceResult(val result: String?):TranslateEvent()
+    data class SubmitVoiceResult(val result: String?): TranslateEvent()
     object OnErrorSeen: TranslateEvent()
 }

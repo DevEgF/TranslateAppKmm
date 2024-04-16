@@ -11,13 +11,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AndroidTranslateViewModel @Inject constructor(
-    private val translateUseCase: TranslateUseCase,
+    private val translate: TranslateUseCase,
     private val historyDataSource: HistoryDataSource
 ): ViewModel() {
 
     private val viewModel by lazy {
         TranslateViewModel(
-            translateUseCase = translateUseCase,
+            translate = translate,
             historyDataSource = historyDataSource,
             coroutineScope = viewModelScope
         )
@@ -25,7 +25,7 @@ class AndroidTranslateViewModel @Inject constructor(
 
     val state = viewModel.state
 
-    fun onEvent(event: TranslateEvent){
+    fun onEvent(event: TranslateEvent) {
         viewModel.onEvent(event)
     }
 }

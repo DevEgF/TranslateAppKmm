@@ -2,6 +2,7 @@ package com.example.translator_kmm.android.translate.presentation.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -12,29 +13,33 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.translator_kmm.android.translate.presentation.components.LanguageDropDown
-import com.example.translator_kmm.android.translate.presentation.components.SwapLanguageButton
+import com.example.translator_kmm.android.translate.presentation.components.SwapLanguagesButton
 import com.example.translator_kmm.translate.presentation.TranslateEvent
 import com.example.translator_kmm.translate.presentation.TranslateState
 
 @Composable
 fun TranslateScreen(
     state: TranslateState,
-    onEvent: (TranslateEvent) -> Unit,
+    onEvent: (TranslateEvent) -> Unit
 ) {
     Scaffold(
-        floatingActionButton = {},
-    ) { paddingValues ->
+        floatingActionButton = {
+
+        }
+    ) { padding ->
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(paddingValues)
+                .padding(padding)
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             item {
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     LanguageDropDown(
                         language = state.fromLanguage,
@@ -49,14 +54,16 @@ fun TranslateScreen(
                             onEvent(TranslateEvent.ChooseFromLanguage(it))
                         }
                     )
-                    SwapLanguageButton(onClick = {
-                        onEvent(TranslateEvent.SwapLanguage)
+                    Spacer(modifier = Modifier.weight(1f))
+                    SwapLanguagesButton(onClick = {
+                        onEvent(TranslateEvent.SwapLanguages)
                     })
+                    Spacer(modifier = Modifier.weight(1f))
                     LanguageDropDown(
                         language = state.toLanguage,
                         isOpen = state.isChoosingToLanguage,
                         onClick = {
-                            onEvent(TranslateEvent.OpenFromLanguageDropDown)
+                            onEvent(TranslateEvent.OpenToLanguageDropDown)
                         },
                         onDismiss = {
                             onEvent(TranslateEvent.StopChoosingLanguage)
@@ -67,7 +74,6 @@ fun TranslateScreen(
                     )
                 }
             }
-
         }
     }
 }

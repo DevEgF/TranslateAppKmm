@@ -15,7 +15,7 @@ import androidx.compose.ui.res.vectorResource
 import com.example.translator_kmm.android.R
 
 @Composable
-fun SwapLanguageButton(
+fun SwapLanguagesButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -24,11 +24,11 @@ fun SwapLanguageButton(
         modifier = modifier
             .clip(CircleShape)
             .background(MaterialTheme.colors.primary)
-        ) {
+    ) {
         Icon(
             imageVector = ImageVector.vectorResource(id = R.drawable.swap_languages),
             contentDescription = stringResource(id = R.string.swap_languages),
-            tint = Color.White
+            tint = MaterialTheme.colors.onPrimary
         )
     }
 }

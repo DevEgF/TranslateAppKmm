@@ -33,23 +33,22 @@ fun LanguageDropDown(
     onSelectLanguage: (UiLanguage) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Box(
-        modifier = modifier
-    ) {
+    Box(modifier = modifier) {
         DropdownMenu(
             expanded = isOpen,
             onDismissRequest = onDismiss
         ) {
-            UiLanguage.allLanguages.forEach {language ->
+            UiLanguage.allLanguages.forEach { language ->
                 LanguageDropDownItem(
                     language = language,
-                    onClick = { onSelectLanguage(language)
+                    onClick = {
+                        onSelectLanguage(language)
                     },
                     modifier = Modifier.fillMaxWidth()
                 )
             }
         }
-        Row (
+        Row(
             modifier = Modifier
                 .clickable(onClick = onClick)
                 .padding(16.dp),
