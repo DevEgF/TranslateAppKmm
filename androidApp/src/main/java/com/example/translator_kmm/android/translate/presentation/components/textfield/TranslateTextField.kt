@@ -34,6 +34,7 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.capitalize
 import androidx.compose.ui.unit.dp
 import com.example.translator_kmm.android.R
 import com.example.translator_kmm.android.core.theme.LightBlue
@@ -199,7 +200,7 @@ private fun IdleTranslateTextField(
             )
         }
         ProgressButton(
-            text = "Translate",
+            text = "Translate".lowercase(),
             isLoading = isTranslating,
             onClick = onTranslateClick,
             modifier = Modifier.align(Alignment.BottomEnd)

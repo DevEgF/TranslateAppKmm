@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -29,7 +30,8 @@ fun LanguageDropDownItem(
         )
         Spacer(modifier = Modifier.width(16.dp))
         Text(
-            text = language.language.langName
+            text = language.language.langName,
+            color = MaterialTheme.colorScheme.onSurface
         )
     }
 }

@@ -57,7 +57,7 @@ fun LanguageDropDown(
             AsyncImage(
                 model = language.drawableRes,
                 contentDescription = language.language.langName,
-                modifier = Modifier.size(30.dp)
+                modifier = Modifier.size(40.dp)
             )
             Spacer(modifier = Modifier.width(16.dp))
             Text(
