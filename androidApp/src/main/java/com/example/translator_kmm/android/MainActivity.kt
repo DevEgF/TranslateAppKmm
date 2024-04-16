@@ -17,8 +17,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.translator_kmm.android.core.presentation.Routes
 import com.example.translator_kmm.android.translate.presentation.AndroidTranslateViewModel
 import com.example.translator_kmm.android.translate.presentation.screen.TranslateScreen
+import com.example.translator_kmm.android.translate.presentation.theme.TranslatorTheme
 import dagger.hilt.android.AndroidEntryPoint
-import okhttp3.Route
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {

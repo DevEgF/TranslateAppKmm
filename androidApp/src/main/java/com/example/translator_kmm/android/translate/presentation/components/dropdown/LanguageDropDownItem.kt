@@ -1,4 +1,4 @@
-package com.example.translator_kmm.android.translate.presentation.components
+package com.example.translator_kmm.android.translate.presentation.components.dropdown
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Spacer

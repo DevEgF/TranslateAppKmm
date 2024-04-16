@@ -1,4 +1,4 @@
-package com.example.translator_kmm.android
+package com.example.translator_kmm.android.translate.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -15,6 +15,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.translator_kmm.android.R
 import com.example.translator_kmm.android.core.theme.AccentViolet
 import com.example.translator_kmm.android.core.theme.DarkGrey
 import com.example.translator_kmm.android.core.theme.LightBlueGrey

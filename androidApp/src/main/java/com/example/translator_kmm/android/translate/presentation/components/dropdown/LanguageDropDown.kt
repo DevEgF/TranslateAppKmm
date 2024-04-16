@@ -1,4 +1,4 @@
-package com.example.translator_kmm.android.translate.presentation.components
+package com.example.translator_kmm.android.translate.presentation.components.dropdown
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
