@@ -18,7 +18,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.unit.dp
-import com.example.translator_kmm.android.R
 import com.example.translator_kmm.android.translate.presentation.components.dropdown.LanguageDropDown
 import com.example.translator_kmm.android.translate.presentation.components.dropdown.SwapLanguagesButton
 import com.example.translator_kmm.android.translate.presentation.components.textfield.TranslateTextField
