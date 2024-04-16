@@ -1,5 +1,6 @@
 package com.example.translator_kmm.android.translate.presentation.screen
 
+import android.speech.tts.TextToSpeech
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -21,8 +22,10 @@ import com.example.translator_kmm.android.R
 import com.example.translator_kmm.android.translate.presentation.components.dropdown.LanguageDropDown
 import com.example.translator_kmm.android.translate.presentation.components.dropdown.SwapLanguagesButton
 import com.example.translator_kmm.android.translate.presentation.components.textfield.TranslateTextField
+import com.example.translator_kmm.android.translate.presentation.components.textfield.rememberTextToSpeech
 import com.example.translator_kmm.translate.presentation.TranslateEvent
 import com.example.translator_kmm.translate.presentation.TranslateState
+import java.util.Locale
 
 @Composable
 fun TranslateScreen(
@@ -85,7 +88,7 @@ fun TranslateScreen(
             item {
                 val clipboardManager = LocalClipboardManager.current
                 val keyboardController = LocalSoftwareKeyboardController.current
-
+                val tts = rememberTextToSpeech()
                 TranslateTextField(
                     fromText = state.fromText,
                     toText = state.toText,
@@ -115,7 +118,13 @@ fun TranslateScreen(
                         onEvent(TranslateEvent.CloseTranslation)
                     },
                     onSpeakerClick = {
-
+                        tts.language = state.toLanguage.toLocale() ?: Locale.ENGLISH
+                        tts.speak(
+                            state.toText,
+                            TextToSpeech.QUEUE_FLUSH,
+                            null,
+                            null
+                        )
                     },
                     onTextFieldClick = {
                         onEvent(TranslateEvent.EditTranslation)
