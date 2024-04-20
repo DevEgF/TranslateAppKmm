@@ -10,6 +10,10 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		367426462BD473DD00B14106 /* ProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367426452BD473DD00B14106 /* ProgressButton.swift */; };
+		367426482BD4765A00B14106 /* TranslateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367426472BD4765A00B14106 /* TranslateTextField.swift */; };
+		3674264B2BD4852E00B14106 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3674264A2BD4852E00B14106 /* TextToSpeech.swift */; };
+		3674264E2BD486CD00B14106 /* TranslateHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3674264D2BD486CD00B14106 /* TranslateHistoryItem.swift */; };
 		36B6F07C2BD05F9400B72C2F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6F07B2BD05F9400B72C2F /* Colors.swift */; };
 		36B6F0832BD068AA00B72C2F /* LanguageDropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6F0822BD068AA00B72C2F /* LanguageDropDownItem.swift */; };
 		36B6F0852BD06BE500B72C2F /* LanguageDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6F0842BD06BE500B72C2F /* LanguageDropDown.swift */; };
@@ -17,6 +21,8 @@
 		36B6F0892BD06ED700B72C2F /* SwapLanguageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6F0882BD06ED700B72C2F /* SwapLanguageButton.swift */; };
 		36B6F08C2BD070BA00B72C2F /* IOSTranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6F08B2BD070BA00B72C2F /* IOSTranslateViewModel.swift */; };
 		36B6F08E2BD070E000B72C2F /* TranslateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6F08D2BD070E000B72C2F /* TranslateScreen.swift */; };
+		36B6F0902BD09E5B00B72C2F /* GradientSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6F08F2BD09E5B00B72C2F /* GradientSurface.swift */; };
+		36B6F0932BD0A25B00B72C2F /* LanguageDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6F0922BD0A25B00B72C2F /* LanguageDisplay.swift */; };
 		3D62971604D17A4166473DA4 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC66FFAB26DE79B948C0AD5 /* Pods_iosApp.framework */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +33,10 @@
 		0FDBCB2F470B011FA629D4CE /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		1987164B18B32EBED10C5DA9 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		367426452BD473DD00B14106 /* ProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButton.swift; sourceTree = "<group>"; };
+		367426472BD4765A00B14106 /* TranslateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTextField.swift; sourceTree = "<group>"; };
+		3674264A2BD4852E00B14106 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		3674264D2BD486CD00B14106 /* TranslateHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateHistoryItem.swift; sourceTree = "<group>"; };
 		36B6F07B2BD05F9400B72C2F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		36B6F0822BD068AA00B72C2F /* LanguageDropDownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDropDownItem.swift; sourceTree = "<group>"; };
 		36B6F0842BD06BE500B72C2F /* LanguageDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDropDown.swift; sourceTree = "<group>"; };
@@ -34,6 +44,8 @@
 		36B6F0882BD06ED700B72C2F /* SwapLanguageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapLanguageButton.swift; sourceTree = "<group>"; };
 		36B6F08B2BD070BA00B72C2F /* IOSTranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTranslateViewModel.swift; sourceTree = "<group>"; };
 		36B6F08D2BD070E000B72C2F /* TranslateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateScreen.swift; sourceTree = "<group>"; };
+		36B6F08F2BD09E5B00B72C2F /* GradientSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSurface.swift; sourceTree = "<group>"; };
+		36B6F0922BD0A25B00B72C2F /* LanguageDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDisplay.swift; sourceTree = "<group>"; };
 		3FC66FFAB26DE79B948C0AD5 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +72,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		367426492BD4851A00B14106 /* speech */ = {
+			isa = PBXGroup;
+			children = (
+				3674264A2BD4852E00B14106 /* TextToSpeech.swift */,
+			);
+			path = speech;
+			sourceTree = "<group>";
+		};
+		3674264C2BD486B500B14106 /* HistoryItem */ = {
+			isa = PBXGroup;
+			children = (
+				3674264D2BD486CD00B14106 /* TranslateHistoryItem.swift */,
+			);
+			path = HistoryItem;
+			sourceTree = "<group>";
+		};
 		36B6F0792BD05F4400B72C2F /* core */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				36B6F07B2BD05F9400B72C2F /* Colors.swift */,
+				36B6F08F2BD09E5B00B72C2F /* GradientSurface.swift */,
 			);
 			path = theme;
 			sourceTree = "<group>";
@@ -95,6 +124,7 @@
 		36B6F07F2BD0687200B72C2F /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				367426492BD4851A00B14106 /* speech */,
 				36B6F08A2BD0709E00B72C2F /* screen */,
 				36B6F0802BD0687700B72C2F /* components */,
 				36B6F08B2BD070BA00B72C2F /* IOSTranslateViewModel.swift */,
@@ -105,6 +135,8 @@
 		36B6F0802BD0687700B72C2F /* components */ = {
 			isa = PBXGroup;
 			children = (
+				3674264C2BD486B500B14106 /* HistoryItem */,
+				36B6F0912BD0A24800B72C2F /* TextField */,
 				36B6F0812BD0688600B72C2F /* DropDown */,
 			);
 			path = components;
@@ -127,6 +159,16 @@
 				36B6F08D2BD070E000B72C2F /* TranslateScreen.swift */,
 			);
 			path = screen;
+			sourceTree = "<group>";
+		};
+		36B6F0912BD0A24800B72C2F /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				36B6F0922BD0A25B00B72C2F /* LanguageDisplay.swift */,
+				367426452BD473DD00B14106 /* ProgressButton.swift */,
+				367426472BD4765A00B14106 /* TranslateTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		5EEBA6A1A9F1A9230FB2227A /* Pods */ = {
@@ -292,15 +334,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367426462BD473DD00B14106 /* ProgressButton.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				36B6F0902BD09E5B00B72C2F /* GradientSurface.swift in Sources */,
 				36B6F07C2BD05F9400B72C2F /* Colors.swift in Sources */,
+				36B6F0932BD0A25B00B72C2F /* LanguageDisplay.swift in Sources */,
 				36B6F0872BD06D6000B72C2F /* SmallLanguageIcon.swift in Sources */,
 				36B6F08C2BD070BA00B72C2F /* IOSTranslateViewModel.swift in Sources */,
 				36B6F0852BD06BE500B72C2F /* LanguageDropDown.swift in Sources */,
 				36B6F0892BD06ED700B72C2F /* SwapLanguageButton.swift in Sources */,
 				36B6F0832BD068AA00B72C2F /* LanguageDropDownItem.swift in Sources */,
 				36B6F08E2BD070E000B72C2F /* TranslateScreen.swift in Sources */,
+				3674264B2BD4852E00B14106 /* TextToSpeech.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				3674264E2BD486CD00B14106 /* TranslateHistoryItem.swift in Sources */,
+				367426482BD4765A00B14106 /* TranslateTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
