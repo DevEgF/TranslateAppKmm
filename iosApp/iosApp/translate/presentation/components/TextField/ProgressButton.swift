@@ -25,11 +25,10 @@ struct ProgressButton: View {
             if isLoading {
                 ProgressView()
                     .animation(.easeInOut, value: isLoading)
-                    .padding()
+                    .padding(5)
                     .background(Color.primaryColor)
                     .cornerRadius(100)
                     .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                
             } else {
                 Text(text.uppercased())
                     .animation(.easeInOut, value: isLoading)
@@ -41,5 +40,15 @@ struct ProgressButton: View {
                     .cornerRadius(100)
             }
         }
+    }
+}
+
+struct ProgressButton_Previews: PreviewProvider {
+    static var previews: some View {
+        ProgressButton(
+            text: "Translate",
+            isLoading: false,
+            onClick: {}
+        )
     }
 }

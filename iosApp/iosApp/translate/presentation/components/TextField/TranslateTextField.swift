@@ -20,17 +20,13 @@ struct TranslateTextField: View {
     
     var body: some View {
         if toText == nil || isTranslating {
-            IdleTextField(
-                fromText: $fromText,
-                isTranslating: isTranslating,
-                onTranslateEvent: onTranslateEvent
-            )
-            .gradientSurface()
-            .cornerRadius(15)
-            .animation(.easeInOut, value: isTranslating)
-            .shadow(radius: 4)
+            IdleTextField(fromText: $fromText, isTranslating: isTranslating, onTranslateEvent: onTranslateEvent)
+                .gradientSurface()
+                .cornerRadius(15)
+                .animation(.easeInOut, value: isTranslating)
+                .shadow(radius: 4)
         } else {
-            TranslatedTextFiel(
+            TranslatedTextField(
                 fromText: fromText,
                 toText: toText ?? "",
                 fromLanguage: fromLanguage,
@@ -49,15 +45,20 @@ struct TranslateTextField: View {
     }
 }
 
-#Preview {
-    TranslateTextField(
-        fromText: Binding(get: {"test"}, set: {value in}),
-        toText: "Test",
-        isTranslating: false,
-        fromLanguage: UiLanguage(language: .english, imageName: "english"),
-        toLanguage: UiLanguage(language: .german, imageName: "german"),
-        onTranslateEvent: {event in}
-    )
+struct TranslateTextField_Previews: PreviewProvider {
+    static var previews: some View {
+        TranslateTextField(
+            fromText: Binding(
+                get: { "test" },
+                set: { value in }
+            ),
+            toText: "Test",
+            isTranslating: false,
+            fromLanguage: UiLanguage(language: .english, imageName: "english"),
+            toLanguage: UiLanguage(language: .german, imageName: "german"),
+            onTranslateEvent: { event in }
+        )
+    }
 }
 
 private extension TranslateTextField {
@@ -70,13 +71,13 @@ private extension TranslateTextField {
         var body: some View {
             TextEditor(text: $fromText)
                 .frame(
-                    maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,
+                    maxWidth: .infinity,
                     minHeight: 200,
                     alignment: .topLeading
                 )
                 .padding()
                 .foregroundColor(Color.onSurface)
-                .overlay(alignment: .bottomTrailing){
+                .overlay(alignment: .bottomTrailing) {
                     ProgressButton(
                         text: "Translate",
                         isLoading: isTranslating,
@@ -93,7 +94,7 @@ private extension TranslateTextField {
         }
     }
     
-    struct TranslatedTextFiel: View {
+    struct TranslatedTextField: View {
         let fromText: String
         let toText: String
         let fromLanguage: UiLanguage
