@@ -1,6 +1,5 @@
 package com.example.translator_kmm.util
 
-import com.example.translator_kmm.util.CommonStateFlow
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
